@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script>
+			function abc()
+			{
+				var a=t1.value;
+				var noc=0,alpha=0,digit=0,word=0,sps=0,vowel=0,conso=0,upr=0,lwr=0;
+				noc=a.length;
+				for(var i=0;i<a.length;i++)
+				{
+					var ascii=a.charCodeAt(i);
+					if(ascii>=65 && ascii<=90)
+						upr++;
+					else if(ascii>=97 && ascii<=122)
+						lwr++;
+					else if(ascii>=48 && ascii<=57)
+						digit++;
+					else 
+						sps++;
+					
+					if((ascii>=65 && ascii<=90) || (ascii>=97 && ascii<=122))
+					{
+						alpha++;
+						if(a[i]=="A" || a[i]=="E" || a[i]=="I" || a[i]=="O" || a[i]=="U" || a[i]=="a" || a[i]=="e" || a[i]=="o" || a[i]=="i" || a[i]=="u")
+							vowel++;
+						else
+						conso++;
+					}
+					if(a[i]==" ")
+						word++;
+				}
+				// Loop End
+				if(a.length>0)
+					word++
+				// Output Printing
+				p1.innerHTML="Number of Characters = "+noc;
+				p1.innerHTML+="<br/>Number of Words = "+word;
+				p1.innerHTML+="<br/>Number of Alphabtes = "+alpha;
+				p1.innerHTML+="<br/>Number of Digits = "+digit;
+				p1.innerHTML+="<br/>Number of Vowels = "+vowel;
+				p1.innerHTML+="<br/>Number of Consonents = "+conso;
+				p1.innerHTML+="<br/>Number of Lowercase = "+lwr;
+				p1.innerHTML+="<br/>Number of Uppercase = "+upr;
+				p1.innerHTML+="<br/>Number of Special Symbols = "+sps;
+				
+			}
+		</script>
+	</head>
+	<body>
+		<textarea id="t1" rows="10" cols="50" ></textarea>	
+		<br/>
+		<button onclick="abc()" >Calculate</button>
+		<hr/>
+		<p id="p1"></p>
+	</body>
+</html>

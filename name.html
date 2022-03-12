@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script>
+			function abc()
+			{
+				var name=t1.value;
+				if(name.match(/^[0-9]+$/))
+				{
+					if(name.length==10)
+					{
+					t1.style.borderColor="green";
+					alert("mobile is correct");
+					}
+					else
+					{
+						alert("invalid mobile");
+						t1.style.borderColor="red";
+					}
+				}
+				else
+				{
+					alert("invalid mobile");
+					t1.style.borderColor="red";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		Enter Name
+		<input maxlength="10" type="text" id="t1" />
+		<br/><br/>
+		<button onclick="abc()">Save</button>
+	</body>
+</html>

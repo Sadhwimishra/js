@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<style>
+			#box
+			{
+				height:50px;
+				width:200px;
+				padding:10px;
+				background-color:gray;
+				color:silver;
+				font-size:40px;
+				text-align:center;
+				font-family:'comic sans ms';
+			}
+		</style>
+		<script>
+			function getrandom(min,max)
+			{
+				var x=Math.random()*(max-min+1)+min;
+				x=Math.floor(x);
+				return x;
+			}
+			function abc()
+			{
+				var a= String.fromCharCode(getrandom(65,90));
+				var b= String.fromCharCode(getrandom(97,122));
+				var c= String.fromCharCode(getrandom(65,90));
+				var d=String.fromCharCode(getrandom(48,57));
+				var e=String.fromCharCode(getrandom(48,57));
+				var f=String.fromCharCode(getrandom(97,122));
+				
+				var captcha=a+b+c+d+e+f;
+				box.innerHTML=captcha;
+			}
+			function match()
+			{
+				if(box.innerHTML==t1.value)
+				{
+					alert("Captcha Matched");
+				}
+				else
+				{
+					alert("Captcha Not Matched");
+				}
+			}
+			
+		</script>
+	</head>
+	<body onload="abc()">
+		
+		<div id="box"></div><button onclick="abc()"> &#8635; </button>
+		<input type="text" id="t1" />
+		<button onclick="match()" >Match</button>
+	
+	</body>
+</html>
+
+
+

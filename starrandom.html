@@ -1,0 +1,181 @@
+<html>
+	<head>
+		<style>
+			#outer
+			{
+				width:900px;
+				height:600px;
+				background-color:black;
+				padding:20px;
+			}
+			.star
+			{
+				margin:5px 30px 20px 30px;
+				width:0px;
+				height:0px;
+				position:relative;
+				border-left:10px solid transparent;
+				border-bottom:40px solid red;
+				border-right:10px solid transparent;
+				float:left;
+			}
+			.star:after
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid red;
+				border-right:40px solid transparent;
+				transform:rotate(35deg);
+			}	
+			.star:before
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid red;
+				border-right:40px solid transparent;
+				transform:rotate(-35deg);
+			}	
+			.star1
+			{
+				margin:5px 30px 20px 30px;
+				width:0px;
+				height:0px;
+				position:relative;
+				border-left:10px solid transparent;
+				border-bottom:40px solid blue;
+				border-right:10px solid transparent;
+				float:left;
+			}
+			.star1:after
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid blue;
+				border-right:40px solid transparent;
+				transform:rotate(35deg);
+			}	
+			.star1:before
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid blue;
+				border-right:40px solid transparent;
+				transform:rotate(-35deg);
+			}	
+			.star2
+			{
+				margin:5px 30px 20px 30px;
+				width:0px;
+				height:0px;
+				position:relative;
+				border-left:10px solid transparent;
+				border-bottom:40px solid yellow;
+				border-right:10px solid transparent;
+				float:left;
+			}
+			.star2:after
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid yellow;
+				border-right:40px solid transparent;
+				transform:rotate(35deg);
+			}	
+			.star2:before
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid yellow;
+				border-right:40px solid transparent;
+				transform:rotate(-35deg);
+			}	
+			.star3
+			{
+				margin:5px 30px 20px 30px;
+				width:0px;
+				height:0px;
+				position:relative;
+				border-left:10px solid transparent;
+				border-bottom:40px solid green;
+				border-right:10px solid transparent;
+				float:left;
+			}
+			.star3:after
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid green;
+				border-right:40px solid transparent;
+				transform:rotate(35deg);
+			}	
+			.star3:before
+			{
+				content:'';
+				top:30px;
+				left:-40px;
+				position:absolute;
+				border-left:40px solid transparent;
+				border-bottom:20px solid green;
+				border-right:40px solid transparent;
+				transform:rotate(-35deg);
+			}	
+		</style>
+		<script>
+			var s=0;
+			function abc()
+			{
+				var star=["star","star1","star2","star3"];	
+				var output="";
+				for(var i=1;i<=90;i++)
+				{
+					var a=Math.floor(Math.random()*45);
+					var b=Math.random()+0.2;
+					b=b.toFixed(2);
+					output+="<div class='"+star[s]+"' style='transform:scale("+b+") rotate("+a+"deg)' ></div>";
+					s++;
+					if(s==star.length)
+						s=0;
+				}
+				s++;
+					if(s==star.length)
+						s=0;
+				outer.innerHTML=output;
+				window.setTimeout("abc()",500);
+			}
+		</script>
+	</head>
+	<body onload="abc()">
+		<div id="outer">
+			
+		</div>
+	</body>	
+</html>
+
+
+
+
+
+
+
+

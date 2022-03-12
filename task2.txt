@@ -1,0 +1,6 @@
+1) Create an HTML page to show three text box to input height, width and background-color and create a div
+2) Create an HTML page to show a box and 5 different buttons and change background-color on click of buttons
+3) Create an HTML page to show a textarea and input value, and count in reverse from 200
+4) Create an HTML page to show a box and 5 buttons and change border on click of buttons
+5) Create an HTML page to swap two images
+ 

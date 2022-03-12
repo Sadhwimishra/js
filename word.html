@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+			function abc()
+			{
+				var a=t1.value;
+				var count=0;
+				for(var i=0;i<a.length;i++)
+				{
+					if(a[i]==" ")
+					{
+						count++;
+					}
+				}
+				if(a.length>0)
+					count++;
+				p1.innerHTML=count;
+				if(count==100)
+				{
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<textarea id="t1" onkeypress="return abc()" rows="10" cols="50"></textarea>
+		<hr/>
+		<p id="p1"></p>
+		
+	</body>
+</html>
